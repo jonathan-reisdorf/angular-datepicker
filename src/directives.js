@@ -77,7 +77,9 @@ angular.module('angular-datepicker', [])
                 }));
 
                 scope.$watch('pickADate', function() {
-                    element.pickadate('picker').set('select', scope.pickADate);
+                    if (scope.pickADate) {
+                        element.pickadate('picker').set('select', scope.pickADate);
+                    }
                 });
             }    
         };
@@ -148,7 +150,9 @@ angular.module('angular-datepicker', [])
                 }));
 
                 scope.$watch('pickATime', function() {
-                    element.pickatime('picker').set('select', scope.pickATime);
+                    if (scope.pickATime) {
+                        element.pickatime('picker').set('select', scope.pickATime);
+                    }
                 });
             }    
         };
