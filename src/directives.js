@@ -51,6 +51,8 @@ angular.module('angular-datepicker', [])
                         userOnClose.apply(this, arguments);
                     }
 
+                    element[0].blur();
+
                     if (typeof cordova === 'undefined' || !cordova.plugins || !cordova.plugins.Keyboard) {
                         return;
                     }
