@@ -76,11 +76,9 @@ angular.module('angular-datepicker', [])
                     container: document.body            
                 }));
 
-                setTimeout(function() {
-                    if (scope.pickADate) {
-                        element.pickadate('picker').set('select', scope.pickADate);
-                    }
-                }, 1000);        
+                scope.$watch('pickADate', function() {
+                    element.pickadate('picker').set('select', scope.pickADate);
+                });
             }    
         };
     })
@@ -149,11 +147,9 @@ angular.module('angular-datepicker', [])
                     container: document.body            
                 }));
 
-                setTimeout(function() {
-                    if (scope.pickATime) {
-                        element.pickatime('picker').set('select', scope.pickATime);
-                    }
-                }, 1000);        
+                scope.$watch('pickATime', function() {
+                    element.pickatime('picker').set('select', scope.pickATime);
+                });
             }    
         };
     });
