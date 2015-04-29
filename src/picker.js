@@ -331,7 +331,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                 // Set it as closed.
                 setTimeout(function () {
                     STATE.open = false;
-                }, 1000);
+                }, 0);
 
                 // Unbind the document events.
                 $document.off( '.' + STATE.id )
